@@ -55,7 +55,6 @@ func main() {
 	}(c1, c2)
 
 	sendRandIntToChan := func(c chan int) {
-		defer close(c)
 		for {
 			select {
 			case <-sigChan:
